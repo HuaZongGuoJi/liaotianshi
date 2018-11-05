@@ -1,0 +1,15 @@
+<view class="root">
+  <view class="line" wx:for="{{list}}" wx:key="index">
+    <!-- <text>聊天室列表   </text> -->
+    <view class='title_t'>
+      <view class='title_bo'>
+        <image class='t_icon' src='http://chujiexiuimg.xisanqi.cn/tmp/wx190d7630e614f4bc.o6zAJs6WOdp7iW_Cp-zhGhV-58RQ.u9ApRQnxzYVe5138ae392b21da9f222597b24f60ee48.jpg'></image>
+      </view>
+      <view class='group_name'>{{item.group_name}}({{item.online_num}}/{{item.user_count}})</view>
+    </view>
+    <view class='got_btn'> 
+      <button data-name='{{item.group_id}}' data-title='{{item.group_name}}' bindtap='openChat'>进入聊天</button>
+    </view>
+    <!-- </view> -->
+  </view>
+</view>

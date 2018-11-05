@@ -1,0 +1,14 @@
+{
+	"pages": [
+		"pages/index/index",
+		"pages/chat/chat",
+		"pages/login/login"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#333",
+		"navigationBarTitleText": "workerman聊天室",
+		"navigationBarTextStyle": "white"
+	},
+	"debug":"false"
+}

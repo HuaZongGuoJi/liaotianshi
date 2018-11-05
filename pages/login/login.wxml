@@ -1,0 +1,5 @@
+<view class="root">
+    <view class="line">
+        <button type="primary" open-type="getUserInfo" bindgetuserinfo="getUserInfo" size="default"> 登录 </button>
+    </view>
+</view>

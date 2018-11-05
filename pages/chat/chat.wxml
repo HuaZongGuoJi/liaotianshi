@@ -1,0 +1,21 @@
+<view class="page-wrap">
+    <scroll-view class="chat-container" scroll-y  scroll-into-view="{{lastMessageId}}"  bindscrolltoupper="upper"  scroll-top="{{s_top}}">
+        <!-- 消息区域 -->
+		<view wx:for="{{messages}}" wx:for-item="message" wx:key="id" id="msg_{{index}}" class="message {{message.type}}">
+            <view wx:if="{{message.type == '1'}}" class="user-message {{message.isMe ? 'me' : 'other'}}">
+                <image class="avatar" src="{{message.avatar}}" mode="aspectFill"></image>
+                <view class="text">
+                    <view class="nickname">{{message.username}}</view>
+                    <view class="content">{{message.msg}}</view>
+                </view>
+            </view>
+            <view wx:if="{{message.type == '4'}}" class="system-message">{{message.msg}}</view>
+        </view>
+    </scroll-view>
+    <view class="input-panel">
+        <button class="pic-icon"></button>
+        <input type="text" adjust-position='false' maxlength='-1' confirm-type='send' confirm-hold='false' bindconfirm='sendMessage' value="{{inputContent}}" bindinput="changeInputContent" class="send-input"></input>
+        <button bindtap="sendMessage" class="send-btn">发送</button>
+    </view>
+</view>
+<audio  src="{{src}}" hidden='true' id="myAudio" ></audio>
